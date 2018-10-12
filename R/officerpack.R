@@ -264,7 +264,8 @@ if(c[length(c)]%in%c("center","left","right","justified")){
 #' @examples
 #'
 #'        
-lflextab<-function(table1,csv="yes",
+
+lhflextab<-function(table1,csv="yes",
                 bord="yes",
                 select=NULL,
                 add.h= NULL,

@@ -2,6 +2,6 @@
 
 export(fnote)
 export(len)
-export(lflextab)
+export(lhflextab)
 export(lhtext)
 export(officer.report.template)
