@@ -257,7 +257,6 @@ if(c[length(c)]%in%c("center","left","right","justified")){
 #' @param csv If source = csv otherwise flextable tab
 #' @param lst List of header example lst=c(Mean="mean",animal="dog")
 #' @param add.h Define additional header rows Ex: df<-data.frame(row1=c("",rep("median (CV%)",4),row2=c("Inches","Inches","Inches"#',"Inches","Species") unit=c("mg/mL","inch"," ",       " "," "))) then add.h=df
-#' @param 
 #' @param cf conditional formatting. should be list("i=x, j=y :(format abbreviation) format: col=color (:colred),ita=italic (:ita),bol=bold (:bol), bg=background (:bgred).  Conditional statement = i=~colname >or< or == values, j=~col1+col2". mv=vertical (merge identical value), mh=horizontal (merge identical value); ma=at (merge cells regardless values). ex. mv=list("j=1 or j=~colname :mv"); ma = c.
 #' @param border Border list("vi:dashed:black:header","vo:dashed:black:body","ho:dashed:black:body",etc.)
 #' @keywords officer.report.template
@@ -265,7 +264,7 @@ if(c[length(c)]%in%c("center","left","right","justified")){
 #' @examples
 #'
 #'        
-format.ft<-function(table1,csv="yes",
+lflextab<-function(table1,csv="yes",
                 bord="yes",
                 select=NULL,
                 add.h= NULL,
