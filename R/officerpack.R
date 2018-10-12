@@ -251,7 +251,7 @@ if(c[length(c)]%in%c("center","left","right","justified")){
 }
 
 ####TABLE PRESET
-#' officer.report.template
+#' lflextab
 #'
 #' Create doc for word document using Officer.
 #' @param csv If source = csv otherwise flextable tab
