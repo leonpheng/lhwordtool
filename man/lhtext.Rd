@@ -4,7 +4,7 @@
 \alias{lhtext}
 \title{lhtext}
 \usage{
-lhtext(t)
+lhtext(t, save = NULL)
 }
 \arguments{
 \item{t}{list of items. see example.}
@@ -20,29 +20,5 @@ lhtext(t)
 \description{
 Simple way to create word document using loop of from t list.
 Type lhtext and copy the template to R workspace and start writing.
-}
-\examples{
-TEMPLATE
-x<-NULL
-t[[len(t)]]<-c("lev1","Ceci est un test. lev1= level 1 title")
-t[[len(t)]]<-c("txtn","bold","Add bold paragragh with page break","pageb") #normal simple text
-t[[len(t)]]<-c("lev2","Title for level 2. Below is for creating table")
-tab0<-data.frame(x=c("MONDAY","TUESDAY"),y=c("EAT SOMETHING","DON'T EAT"))
-t[[len(t)]]<-c("tab","dataframe")
-t[[len(t)]]<-c("fnt","This is foot not with font size of 9 by default","pageb")
-t[[len(t)]]<-c("lev2","This a test Plot- Used plot. ggplot could be inserted")
-t[[len(t)]]<-c("fig","plot(1,1)",5,5,"pageb")
-tab1<-read.csv("1-OH-Midazolam1.25+1.25mg.csv")
-t[[len(t)]]<-c("lev2","Another Table from folder")
-t[[len(t)]]<-c("tab","FlexTable(tab1)","pageb")
-t[[len(t)]]<-c("lev2","This a test Image imported from folder and inserted in doc")
-t[[len(t)]]<-c("fcap" or "tcap","This is for figure caption and tcap for table caption")
-t[[len(t)]]<-c("ima","hydroxy-auc0.6-v-age-1.png",7.4,6)
-t[[len(t)]]<-c("txtc","This is complex text editor is ::b:i"," X","2::e:u" ,"bold::b:i:s","fwb::e","this::i","fsti::b:i") #formatted text.
-tips for symbol, example: ++a++, ++inf++, ++n++, etc.. then do search and replace in Word
-e=superscrip, s=subscript, b=bold, i=italic, ::= start code, := additional code
-lhtext(t,toc.level=3,template="style.docx",TOC=F)
-to write doc: writeDoc(doc,"name.docx")
-lhtext()
 }
 \keyword{lhtext}

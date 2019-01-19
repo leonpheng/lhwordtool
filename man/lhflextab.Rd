@@ -11,9 +11,9 @@ lhflextab(table1, csv = "yes", bord = "yes", select = NULL,
 \arguments{
 \item{csv}{If source = csv otherwise flextable tab}
 
-\item{add.h}{Define additional header rows Ex: df<-data.frame(row1=c("",rep("median (CV%)",4),row2=c("Inches","Inches","Inches"#',"Inches","Species") unit=c("mg/mL","inch"," ",       " "," "))) then add.h=df}
+\item{add.h}{Define additional header rows df<-data.frame(row1=c("",rep("median (CV%)",4),row2=c("Inches","Inches","Inches"#',"Inches","Species") unit=c("mg/mL","inch"," ",       " "," "))) then add.h=df}
 
-\item{cf}{conditional formatting. should be list("i=x, j=y :(format abbreviation) format: col=color (:colred),ita=italic (:ita),bol=bold (:bol), bg=background (:bgred).  Conditional statement = i=~colname >or< or == values, j=~col1+col2". mv=vertical (merge identical value), mh=horizontal (merge identical value); ma=at (merge cells regardless values). ex. mv=list("j=1 or j=~colname :mv"); ma = c.}
+\item{cf}{Conditional formatting}
 
 \item{border}{Border list("vi:dashed:black:header","vo:dashed:black:body","ho:dashed:black:body",etc.)}
 
@@ -22,8 +22,4 @@ lhflextab(table1, csv = "yes", bord = "yes", select = NULL,
 \description{
 Create doc for word document using Officer.
 }
-\examples{
-
-       
-}
-\keyword{officer.report.template}
+\keyword{}
