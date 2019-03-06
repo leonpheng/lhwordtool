@@ -269,7 +269,7 @@ cf_example<-function(...){
 }
 
 
-#' lhflextab
+#' lhflex
 #' Create doc for word document using Officer.
 #' @param csv If source = csv otherwise flextable tab
 #' @param lst List of header example lst=c(Mean="mean",animal="dog")
@@ -279,8 +279,9 @@ cf_example<-function(...){
 #' @keywords 
 #' 
 #' @examples
+#' lhflex
 
-lhflextab<-function (table1, csv = "yes", bord = "yes", select = NULL, add.h = NULL, 
+lhflex<-function (table1, csv = "yes", bord = "yes", select = NULL, add.h = NULL, 
                      merge.all = "yes", size = 12, empty = NULL, cf = NULL, border = NULL, 
                      align = "center") 
 {
