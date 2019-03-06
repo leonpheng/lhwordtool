@@ -6,18 +6,8 @@
 \usage{
 cf_example(...)
 }
-\arguments{
-\item{csv}{If source = csv otherwise flextable tab}
-
-\item{lst}{List of header example lst=c(Mean="mean",animal="dog")}
-
-\item{add.h}{Define additional header rows df<-data.frame(row1=c("",rep("median (CV%)",4),row2=c("Inches","Inches","Inches"#',"Inches","Species") unit=c("mg/mL","inch"," ",       " "," "))) then add.h=df}
-
-\item{cf}{Conditional formatting}
-
-\item{border}{Border list("vi:dashed:black:header","vo:dashed:black:body","ho:dashed:black:body",etc.)}
-}
 \description{
-Create doc for word document using Officer.
+Simple way to create word document using loop of from t list.
+Type lhtext and copy the template to R workspace and start writing.
 }
-\keyword{}
+\keyword{lhtext}

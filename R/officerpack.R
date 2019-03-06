@@ -245,14 +245,10 @@ lhtext<-function (doc,t,save=NULL,heading="HD")
 
 #' cf_example
 #'
-#' Create doc for word document using Officer.
-#' @param csv If source = csv otherwise flextable tab
-#' @param lst List of header example lst=c(Mean="mean",animal="dog")
-#' @param add.h Define additional header rows df<-data.frame(row1=c("",rep("median (CV%)",4),row2=c("Inches","Inches","Inches"#',"Inches","Species") unit=c("mg/mL","inch"," ",       " "," "))) then add.h=df
-#' @param cf  Conditional formatting
-#' @param border Border list("vi:dashed:black:header","vo:dashed:black:body","ho:dashed:black:body",etc.)
-#' @keywords 
-#' 
+#' Simple way to create word document using loop of from t list.
+#' Type lhtext and copy the template to R workspace and start writing.
+#' @keywords lhtext
+#' @export
 #' @examples
 
 cf_example<-function(...){
@@ -270,16 +266,17 @@ cf_example<-function(...){
 
 
 #' lhflex
-#' Create doc for word document using Officer.
+#'
+#' Simple way to create word document using loop of from t list.
+#' Type lhtext and copy the template to R workspace and start writing.
 #' @param csv If source = csv otherwise flextable tab
 #' @param lst List of header example lst=c(Mean="mean",animal="dog")
 #' @param add.h Define additional header rows df<-data.frame(row1=c("",rep("median (CV%)",4),row2=c("Inches","Inches","Inches"#',"Inches","Species") unit=c("mg/mL","inch"," ",       " "," "))) then add.h=df
 #' @param cf  Conditional formatting see cf_example
 #' @param border Border list("vi:dashed:black:header","vo:dashed:black:body","ho:dashed:black:body",etc.)
-#' @keywords 
-#' 
+#' @keywords lhflex
+#' @export
 #' @examples
-#' lhflex
 
 lhflex<-function (table1, csv = "yes", bord = "yes", select = NULL, add.h = NULL, 
                      merge.all = "yes", size = 12, empty = NULL, cf = NULL, border = NULL, 

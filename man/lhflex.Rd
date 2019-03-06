@@ -2,8 +2,7 @@
 % Please edit documentation in R/officerpack.R
 \name{lhflex}
 \alias{lhflex}
-\title{lhflex
-Create doc for word document using Officer.}
+\title{lhflex}
 \usage{
 lhflex(table1, csv = "yes", bord = "yes", select = NULL,
   add.h = NULL, merge.all = "yes", size = 12, empty = NULL,
@@ -21,10 +20,7 @@ lhflex(table1, csv = "yes", bord = "yes", select = NULL,
 \item{lst}{List of header example lst=c(Mean="mean",animal="dog")}
 }
 \description{
-lhflex
-Create doc for word document using Officer.
+Simple way to create word document using loop of from t list.
+Type lhtext and copy the template to R workspace and start writing.
 }
-\examples{
-lhflex
-}
-\keyword{}
+\keyword{lhflex}
