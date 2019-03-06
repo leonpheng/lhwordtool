@@ -4,16 +4,16 @@
 \alias{lhtext}
 \title{lhtext}
 \usage{
-lhtext(t, save = NULL)
+lhtext(doc, t, save = NULL, heading = "HD")
 }
 \arguments{
+\item{doc}{doc created by read_docx or lhstartdoc with template. See lhtext_example.}
+
 \item{t}{list of items. see example.}
 
 \item{toc.level}{maximimum toc level}
 
 \item{template}{Word document template could be used for styles. Styles should be mapped in style.to.map. Template is also available at github: to load it, just run  lhtemp() once to download and store the templates in your PC at "c:lhtemplate. Note that the templates and logo are also used in xptdef package.}
-
-\item{TOC}{Set to F if no TOC wanted}
 
 \item{style.to.map}{Map the styles in template to be used. Ex: mypar is for footnote (font size)}
 }

@@ -52,18 +52,15 @@ lhstartdoc<-function (temp="c:/lhtemplate/stylereport.docx",TFL=T)
 }
 
 
-#' lhtext
+#' lhtext_example
 #'
 #' Simple way to create word document using loop of from t list.
 #' Type lhtext and copy the template to R workspace and start writing.
-#' @param t list of items. see example.
-#' @param toc.level maximimum toc level
-#' @param template Word document template could be used for styles. Styles should be mapped in style.to.map. Template is also available at github: to load it, just run  lhtemp() once to download and store the templates in your PC at "c:lhtemplate. Note that the templates and logo are also used in xptdef package.
-#' @param TOC Set to F if no TOC wanted
-#' @param style.to.map Map the styles in template to be used. Ex: mypar is for footnote (font size)
 #' @keywords lhtext
 #' @export
 #' @examples
+
+lhtext_example<-function(...){
 #' TEMPLATE
 #' doc<-lhstartdoc() Need to check the style. Use template from lhtemplate
 #' t<-NULL
@@ -78,10 +75,25 @@ lhstartdoc<-function (temp="c:/lhtemplate/stylereport.docx",TFL=T)
 #' ::e=superscrip, 
 #' ::s=subscript, ::b=bold, ::i=italic, ::colred for color, ::size16 for font size 16
 #' example: t[[len(t)]]<-c("txt","I want to ","eat ::colred:size15:i","center")
-#'
-#' lhtext()
+}
 
-lhtext<-function (t,save=NULL)
+
+
+#' lhtext
+#'
+#' Simple way to create word document using loop of from t list.
+#' Type lhtext and copy the template to R workspace and start writing.
+#' @param doc doc created by read_docx or lhstartdoc with template. See lhtext_example.
+#' @param t list of items. see example.
+#' @param toc.level maximimum toc level
+#' @param template Word document template could be used for styles. Styles should be mapped in style.to.map. Template is also available at github: to load it, just run  lhtemp() once to download and store the templates in your PC at "c:lhtemplate. Note that the templates and logo are also used in xptdef package.
+#' @param style.to.map Map the styles in template to be used. Ex: mypar is for footnote (font size)
+#' @keywords lhtext
+#' @export
+#' @examples
+
+
+lhtext<-function (doc,t,save=NULL,heading="HD")
 {
   library(ReporteRs)
   library(flextable)
@@ -230,8 +242,8 @@ lhtext<-function (t,save=NULL)
   doc
 }
 
-####TABLE PRESET
-#' lflextab
+
+#' cf_example
 #'
 #' Create doc for word document using Officer.
 #' @param csv If source = csv otherwise flextable tab
@@ -242,15 +254,31 @@ lhtext<-function (t,save=NULL)
 #' @keywords 
 #' 
 #' @examples
-#' Conditional format cf should be cf=list("coordinate :function1")
-#'  Coordinate: i= horizontal, j= vertical. Special coordonate with condition: 
-#'  i=~colname > or< or == values, 
-#'  j=~col1+col2".
-#' Function: should start with : and function abbreviation
-#' cell format function abbreviation: col= color (:colgreen), ita=italic, bol=bold, bg=background (:bgred),
-#' row and column format function: mv or mh = vertical or horizontal merge applied to all cells with identical values
-#' ma= merge all cells regardless values  
-#' Example: cf=list("i=1, j=1 :colred","j=1,:ma") will first add red color to cell in row 1 and col 1 and then merge column 1.      
+
+cf_example<-function(...){
+#Conditional format cf should be cf=list(","coordinate :function1",
+#where Coordinates are i= horizontal, j= vertical. Special coordonate with condition:", 
+#i=~colname >,<,== values", 
+#j=~col1+col2"),
+#"Function:should start with : and function abbreviation").
+#"where cell format function abbreviations are: col= color (ex.colgreen)"),
+#"ita=italic, bol=bold, bg=background (ex.bgred)")),
+#"row and column format function: mv or mh = vertical or horizontal merge applied to all cells with identical values",
+#"ex. ma= merge all cells regardless identical values",  
+#"Example for expression in cf: i=1,j=1:colred,j=1, will first add red color to cell in row 1 and col 1 and then merge column 1.")     
+}
+
+
+#' lhflextab
+#' Create doc for word document using Officer.
+#' @param csv If source = csv otherwise flextable tab
+#' @param lst List of header example lst=c(Mean="mean",animal="dog")
+#' @param add.h Define additional header rows df<-data.frame(row1=c("",rep("median (CV%)",4),row2=c("Inches","Inches","Inches"#',"Inches","Species") unit=c("mg/mL","inch"," ",       " "," "))) then add.h=df
+#' @param cf  Conditional formatting see cf_example
+#' @param border Border list("vi:dashed:black:header","vo:dashed:black:body","ho:dashed:black:body",etc.)
+#' @keywords 
+#' 
+#' @examples
 
 lhflextab<-function (table1, csv = "yes", bord = "yes", select = NULL, add.h = NULL, 
                      merge.all = "yes", size = 12, empty = NULL, cf = NULL, border = NULL, 
