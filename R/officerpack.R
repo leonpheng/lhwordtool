@@ -61,20 +61,21 @@ lhstartdoc<-function (temp="c:/lhtemplate/stylereport.docx",TFL=T)
 #' @examples
 
 lhtext_example<-function(...){
-#' TEMPLATE
-#' doc<-lhstartdoc() Need to check the style. Use template from lhtemplate
-#' t<-NULL
-#' t[[l(t)]]<-c("lev1" for level 1. Define the heading style for each doc template in function","Type header text")
-#' t[[l(t)]]<-c("txt" add text at font size of 15","add text in bold ::b","add text in bold italic ::i:b","text justification in last statement for "center","left","right","justified")
-#' t[[l(t)]]<-c("tab","add flextable peset only. table name should be character "ex.tab1". See lhflextable")
-#' t[[l(t)]]<-c("fig","plot(1,1)",5,5,"pageb")
-#' t[[l(t)]]<-c("fcap" or "tcap","This is for figure caption and tcap for table caption")
-#' t[[l(t)]]<-c("ima","hydroxy-auc0.6-v-age-1.png",7.4,6)
-#' t[[l(t)]]<-c("txt","examples This is complex text editor is ::b:i"," X","2::e:u" ,"bold::b:i:s","fwb::e","this::i","fsti::b:i") #formatted text.
-#' tips for symbol, example: ++a++, ++inf++, ++n++, etc.. then do search and replace in Word
-#' ::e=superscrip, 
-#' ::s=subscript, ::b=bold, ::i=italic, ::colred for color, ::size16 for font size 16
-#' example: t[[len(t)]]<-c("txt","I want to ","eat ::colred:size15:i","center")
+x<-c("create document as doc<-lhstartdoc() Need to check the style. Use template from lhtemplate",
+"t<-NULL",
+                "t[[l(t)]]<-c(lev1,for level 1. Define the heading style for each doc template in function,Type header text",
+                "t[[l(t)]]<-c(txt, add text at font size of 15,add text in bold ::b,add text in bold italic ::i:b,text justification in last statement for center,left,right,justified)",
+                "t[[l(t)]]<-c(tab,add flextable peset only. table name should be character ex.tab1. See lhflextable",
+                "t[[l(t)]]<-c(fig,plot(1,1),5,5,pageb)",
+               "t[[l(t)]]<-c(fcap or tcap,This is for figure caption and tcap for table caption)",
+               "t[[l(t)]]<-c(ima,hydroxy-auc0.6-v-age-1.png,7.4,6)",
+                "t[[l(t)]]<-c(txt,examples This is complex text editor is ::b:i,X,2::e:u,bold::b:i:s,fwb::e,this::i,fsti::b:i)#formatted text.",
+               " tips for symbol, example: ++a++, ++inf++, ++n++, etc.. then do search and replace in Word",
+                "::e=superscrip", 
+                "::s=subscript, ::b=bold, ::i=italic, ::colred for color, ::size16 for font size 16",
+                "example: t[[len(t)]]<-c(txt,I want to ,eat ::colred:size15:i,center)",
+"Note: all text and commands should be included within double quote")
+print(x)
 }
 
 
@@ -252,16 +253,22 @@ lhtext<-function (doc,t,save=NULL,heading="HD")
 #' @examples
 
 cf_example<-function(...){
-#Conditional format cf should be cf=list(","coordinate :function1",
-#where Coordinates are i= horizontal, j= vertical. Special coordonate with condition:", 
-#i=~colname >,<,== values", 
-#j=~col1+col2"),
-#"Function:should start with : and function abbreviation").
-#"where cell format function abbreviations are: col= color (ex.colgreen)"),
-#"ita=italic, bol=bold, bg=background (ex.bgred)")),
-#"row and column format function: mv or mh = vertical or horizontal merge applied to all cells with identical values",
-#"ex. ma= merge all cells regardless identical values",  
-#"Example for expression in cf: i=1,j=1:colred,j=1, will first add red color to cell in row 1 and col 1 and then merge column 1.")     
+ x<-c(
+"Conditional format cf should be cf=list(,coordinate :function1",
+"where Coordinates are i= horizontal, j= vertical. Special coordonate with condition:", 
+"i=~columnname (ex. weight) followed by",
+">",
+"<",
+"==",
+"and conditional values",
+"and specify coordinate of cells that function to be applied ex. j=~col1+col2",
+"Function should start with colon punctuation followed by function abbreviation",
+"where cell format function abbreviations are col for color ex.colgreen for green",
+"ita=italic, bol=bold, bg=background (ex.bgred)",
+"row and column format function: mv or mh = vertical or horizontal merge applied to all cells with identical values",
+"ex. ma= merge all cells regardless identical values",  
+"Example for expression in cf: i=1,j=1:colred,j=1 yield red color to cell in row 1 and col 1 and then merge column 1.")
+ print(x)
 }
 
 
