@@ -1,16 +1,24 @@
-#' fnote
+#' lhfootnote
 #'
 #' convert and sorte list of define in footnote to one paragraph.
-#' @param data list of define. ex<-c("A","C","B"); fnote(ex)= "ABC"
+#' @param list List of define ex. list=c(def1,def2,etc). output should be insert in txt and set font size
 #'
 #' @keywords fnote
 #' @export
 #' @examples
-#' fnote()
+#' lhfootnote()
 #'
-fnote<-function(data){
-  data<-paste(sort(data), sep = '', collapse = '')
-  data}
+lhfootnote<-function(list){
+  f1<-sort(list)
+  f2<-NULL
+  for(x in 1:length(f1)){
+    if(x==1){f2=f1[x]}
+    if(x!=max(f1)){
+      f2<-paste0(f2,"; ",f1[x])
+    }else{f2<-paste0(f2,f1[x])}
+  }
+  f2
+}
 #' len
 #'
 #' could be used in lhtext
